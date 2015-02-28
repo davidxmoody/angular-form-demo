@@ -1,5 +1,9 @@
+// The following settings were chosen to roughly mimic the contact form at:
+// http://mubaloo.com/contact/
+
 @import 'normalize';
 
+// Variables for a simple fixed-width layout
 $form-width: 320px;
 $input-width: 190px;
 $large-input-width: $form-width - 28;
@@ -12,29 +16,37 @@ body {
 }
 
 .form-container {
-  margin: auto;
   width: $form-width;
-  // Setting manual height like this is a bit of a hack
-  height: 300px;
+  height: 300px; // Setting manual height like this is a bit of a hack
+  margin: auto;
   text-align: right;
+
   h2, p {
     text-align: center;
     line-height: 1.4;
   }
+
+  // Hide transitioning forms when they appear outside the container
   overflow: hidden;
   position: relative;
 
+  // Describes how to animate the inner forms/confirmation stage
   &>form, &>div {
     width: $form-width;
     position: absolute;
     transition: all 0.7s;
 
+    // The element *leaving* the app starts in the normal position and ends up
+    // on the left of the .form-container
     &.ng-leave {
       left: 0;
     }
     &.ng-leave.ng-leave-active {
       left: -1.1 * $form-width;
     }
+
+    // The element *entering* the app starts to the right of the
+    // .form-container and ends up in the normal position
     &.ng-enter {
       left: 1.1 * $form-width;
     }
@@ -45,42 +57,53 @@ body {
 }
 
 input, textarea, select {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   width: $input-width;
-  line-height: 18px;
   height: 18px;
+  line-height: 18px;
+
   box-sizing: content-box;
   padding: 4px;
   margin: 9px;
+
   color: #555555;
   background-color: white;
+
   border: 1px solid #cccccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
   transition: all 0.1s;
 }
 
+// Submit button should be nearly full-width
 input[type=submit] {
   width: $large-input-width;
 }
 
+// Disabled submit button should be grayed out
 input[disabled] {
   color: lightgray;
 }
 
+// An input (or select) should have a red glowing border when it is both
+// invalid and has lost focus (to prevent everything starting red)
 input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
   border-color: rgb(233, 50, 45);
   box-shadow: rgb(248, 185, 183) 0px 0px 6px 0px;
 }
 
+// An input (or select) should have a blue glowing border when in focus
 input:focus, select:focus {
   border-color: rgba(82, 168, 236, 0.8);
   box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset, rgba(82, 168, 236, 0.6) 0px 0px 8px 0px;
 }
 
+// Text area needs to fit multiple lines of text
 textarea {
   width: $large-input-width;
   height: 150px;
 }
 
+// Ensure correct overflow behaviour
 pre {
   margin: auto;
   width: $large-input-width;
