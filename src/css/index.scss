@@ -15,7 +15,7 @@ body {
   margin: auto;
   width: $form-width;
   text-align: right;
-  h2 {
+  h2, p {
     text-align: center;
   }
 }
@@ -35,6 +35,10 @@ input, textarea, select {
 
 input[type=submit] {
   width: $large-input-width;
+}
+
+input[disabled] {
+  color: graytext;
 }
 
 textarea {
