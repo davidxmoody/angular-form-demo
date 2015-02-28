@@ -11,12 +11,8 @@
   <div ng-switch="stage">
 
     <form novalidate ng-switch-when="1" ng-submit="nextStage()">
-      Title: <select ng-model="user.title">
+      Title: <select ng-model="user.title" ng-options="title for title in titles">
         <option value="">--</option>
-        <option value="Mr">Mr</option>
-        <option value="Ms">Ms</option>
-        <option value="Mrs">Mrs</option>
-        <!-- Could add more titles, e.g. "Miss", "Dr", "Prof", "Sir", etc. -->
       </select> <br>
       First name: <input type="text" ng-model="user.firstName" required> <br>
       Last name: <input type="text" ng-model="user.lastName" required> <br>
