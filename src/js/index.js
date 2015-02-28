@@ -9,20 +9,20 @@ app.controller('FormCtrl', function($scope, $window) {
     // Could add more, e.g. "Miss", "Dr", "Prof", etc.
   ]
 
-  // Fill in the current time to the nearest minute
-  var now = new Date();
-  now.setSeconds(0);
-  now.setMilliseconds(0);
-
-  $scope.user = {
-    currentDatetime: now
-  };
+  $scope.user = {};
 
   $scope.stage = 1;
 
   $scope.nextStage = function() {
     $scope.stage++;
     $window.scrollTo(0, 0);
+    if ($scope.stage===2 && !$scope.user.currentDatetime) {
+      // Fill in the current time to the nearest minute
+      var now = new Date();
+      now.setSeconds(0);
+      now.setMilliseconds(0);
+      $scope.user.currentDatetime = now;
+    }
   };
 
   $scope.submit = function() {

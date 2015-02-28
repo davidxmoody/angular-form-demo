@@ -31,6 +31,7 @@ input, textarea, select {
   color: #555555;
   background-color: white;
   border: 1px solid #cccccc;
+  transition: all 0.1s;
 }
 
 input[type=submit] {
@@ -38,7 +39,17 @@ input[type=submit] {
 }
 
 input[disabled] {
-  color: graytext;
+  color: lightgray;
+}
+
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
+  border-color: rgb(233, 50, 45);
+  box-shadow: rgb(248, 185, 183) 0px 0px 6px 0px;
+}
+
+input:focus, select:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset, rgba(82, 168, 236, 0.6) 0px 0px 8px 0px;
 }
 
 textarea {

@@ -23,7 +23,7 @@
     </form>
 
     <form novalidate name="stage2" ng-switch-when="2" ng-submit="nextStage()">
-      <h2>What is your current location and time?</h2>
+      <h2>Please enter your current location and time</h2>
       Location: <input type="text" ng-model="user.currentLocation" required> <br>
       Date and time: <input type="datetime-local" ng-model="user.currentDatetime" required> <br>
       <input type="submit" value="Next" ng-disabled="stage2.$invalid"> <br>
