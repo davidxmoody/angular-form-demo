@@ -37,7 +37,8 @@
 
     <div ng-switch-when="4">
       <h2>Success!</h2>
-      <p>Here is the information you submitted:</p>
+      <p>The following information has been submitted to 
+        <a href="{{ requestBinURL }}?inspect">{{ requestBinURL }}</a></p>
       <pre>{{getUserData()}}</pre>
     </div>
 

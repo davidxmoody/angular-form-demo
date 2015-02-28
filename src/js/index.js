@@ -1,6 +1,8 @@
 var app = angular.module('formApp', []);
 
-app.controller('FormCtrl', function($scope, $window) {
+app.controller('FormCtrl', function($scope, $http, $window) {
+
+  $scope.requestBinURL = 'http://requestb.in/1jz6x6q1';
 
   $scope.titles = [
     'Mr',
@@ -26,8 +28,17 @@ app.controller('FormCtrl', function($scope, $window) {
   };
 
   $scope.submit = function() {
-    console.log($scope.user);
     $scope.nextStage();
+    console.log($scope.user);
+
+    // Needs to be sent with the following Content-Type to be picked up by
+    // requestb.in properly
+    $http({
+      method: 'post',
+      url: $scope.requestBinURL,
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      data: $scope.user
+    });
   };
 
   $scope.getUserData = function() {
