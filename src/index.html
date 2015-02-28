@@ -5,7 +5,8 @@
   <title>Mubaloo Dev Test Form</title>
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="css/index.css">
-  <script src="js/angular.min.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/angular-animate.js"></script>
   <script src="js/index.js"></script>
 </head>
 <body ng-controller="FormCtrl">
@@ -23,7 +24,7 @@
     </form>
 
     <form novalidate name="stage2" ng-switch-when="2" ng-submit="nextStage()">
-      <h2>Please enter your current location and time</h2>
+      <h2>Please enter your current <br> location and time</h2>
       Location: <input type="text" ng-model="user.currentLocation" required> <br>
       Date and time: <input type="datetime-local" ng-model="user.currentDatetime" required> <br>
       <input type="submit" value="Next" ng-disabled="stage2.$invalid"> <br>

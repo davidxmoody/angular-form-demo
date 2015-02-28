@@ -1,4 +1,4 @@
-var app = angular.module('formApp', []);
+var app = angular.module('formApp', ['ngAnimate']);
 
 app.controller('FormCtrl', function($scope, $http, $window) {
 

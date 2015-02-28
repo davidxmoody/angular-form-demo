@@ -14,9 +14,33 @@ body {
 .form-container {
   margin: auto;
   width: $form-width;
+  // Setting manual height like this is a bit of a hack
+  height: 300px;
   text-align: right;
   h2, p {
     text-align: center;
+    line-height: 1.4;
+  }
+  overflow: hidden;
+  position: relative;
+
+  &>form, &>div {
+    width: $form-width;
+    position: absolute;
+    transition: all 0.7s;
+
+    &.ng-leave {
+      left: 0;
+    }
+    &.ng-leave.ng-leave-active {
+      left: -1.1 * $form-width;
+    }
+    &.ng-enter {
+      left: 1.1 * $form-width;
+    }
+    &.ng-enter.ng-enter-active {
+      left: 0;
+    }
   }
 }
 
@@ -54,9 +78,12 @@ input:focus, select:focus {
 
 textarea {
   width: $large-input-width;
-  height: 200px;
+  height: 150px;
 }
 
 pre {
+  margin: auto;
+  width: $large-input-width;
   text-align: left;
+  overflow-y: auto;
 }
