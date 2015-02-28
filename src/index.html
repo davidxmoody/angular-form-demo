@@ -17,16 +17,24 @@
         <option value="Ms">Ms</option>
         <option value="Mrs">Mrs</option>
         <!-- Could add more titles, e.g. "Miss", "Dr", "Prof", "Sir", etc. -->
-      </select>
+      </select> <br>
       First name: <input type="text" ng-model="user.firstName" required> <br>
       Last name: <input type="text" ng-model="user.lastName" required> <br>
-      Date of birth: <input type="date" ng-model="user.dateOfBirth" required>
-      <input type="submit">
+      Date of birth: <input type="date" ng-model="user.dateOfBirth" required> <br>
+      <input type="submit" value="Next">
     </form>
 
-    <form ng-switch-when="2"></form>
+    <form novalidate ng-switch-when="2" ng-submit="nextStage()">
+      Current location: <input type="text" ng-model="user.currentLocation" required> <br>
+      Current date and time: <input type="datetime-local" ng-model="user.currentDatetime" required> <br>
+      <input type="submit" value="Next">
+    </form>
 
-    <form ng-switch-when="3"></form>
+    <form novalidate ng-switch-when="3" ng-submit="submit()">
+      <!-- TODO textfield instead of text -->
+      Feedback: <br> <textarea ng-model="user.feedback" cols="30" rows="10"></textarea> <br>
+      <input type="submit" value="Submit">
+    </form>
 
   </div>
 </body>
