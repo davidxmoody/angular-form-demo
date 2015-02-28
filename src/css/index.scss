@@ -1,0 +1,7 @@
+@mixin redbackground() {
+  background: red;
+}
+
+body {
+  @include redbackground();
+}

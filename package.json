@@ -1,0 +1,14 @@
+{
+  "name": "mubaloo-dev-test",
+  "author": "David Moody <david@davidxmoody.com>",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "~3.8.11",
+    "gulp-sass": "~1.3.3",
+    "http-server": "~0.7.5"
+  },
+  "scripts": {
+    "start": "gulp && http-server build"
+  }
+}
