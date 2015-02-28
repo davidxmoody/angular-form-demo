@@ -2,7 +2,7 @@
 <html ng-app="formApp">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Mubaloo Dev Test Form</title>
   <link rel="stylesheet" href="css/index.css">
   <script src="js/angular.min.js"></script>
   <script src="js/index.js"></script>
@@ -27,8 +27,7 @@
     </form>
 
     <form novalidate ng-switch-when="3" ng-submit="submit()">
-      <!-- TODO textfield instead of text -->
-      Feedback: <br> <textarea ng-model="user.feedback" cols="30" rows="10"></textarea> <br>
+      Feedback: <br> <textarea ng-model="user.feedback"></textarea> <br>
       <input type="submit" value="Submit">
     </form>
 
