@@ -32,6 +32,13 @@
       <input type="submit" value="Submit">
     </form>
 
+    <div ng-switch-when="4">
+      <p>
+        Thanks for your input! Here is the information you submitted:
+      </p>
+      <pre>{{getUserData()}}</pre>
+    </div>
+
   </div>
 </body>
 </html>

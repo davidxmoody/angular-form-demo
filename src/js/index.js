@@ -19,6 +19,11 @@ app.controller('FormCtrl', function($scope) {
 
   $scope.submit = function() {
     console.log($scope.user);
+    $scope.stage++;
+  };
+
+  $scope.getUserData = function() {
+    return JSON.stringify($scope.user, null, 2);
   };
 
 });
