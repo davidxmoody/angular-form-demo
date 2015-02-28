@@ -2,7 +2,9 @@ var gulp = require('gulp');
 var connect = require('gulp-connect');
 var sass = require('gulp-sass');
 
-gulp.task('default', ['html', 'css', 'js', 'watch', 'connect']);
+gulp.task('default', ['build', 'watch', 'connect']);
+
+gulp.task('build', ['html', 'css', 'js']);
 
 gulp.task('connect', function() {
   connect.server({
