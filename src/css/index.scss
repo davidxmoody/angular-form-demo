@@ -1,7 +1,3 @@
-@mixin redbackground() {
-  background: red;
-}
-
 body {
-  @include redbackground();
+  font-size: 28px;
 }

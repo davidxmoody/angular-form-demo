@@ -1,5 +1,8 @@
 var app = angular.module('formApp', []);
 
 app.controller('FormCtrl', function($scope) {
-  $scope.hello = 'hello world';
+  $scope.stage = 1;
+  $scope.nextStage = function() {
+    $scope.stage++;
+  };
 });
