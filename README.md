@@ -1,6 +1,6 @@
 ## About
 
-This is my submission for the **Mubaloo JavaScript Developer Test** to build a simple 3 step form. The form is viewable right now at <http://davidxmoody.com/mubaloo/>.
+This is my submission for the **Mubaloo JavaScript Developer Test**. The task was to build a simple 3 step survey form. It is viewable right now at <http://davidxmoody.com/mubaloo/>
 
 ## Setup
 
@@ -17,7 +17,7 @@ The `src/index.html` file contains the Angular form template. The displaying of 
 
 Upon completion of the third stage, the collected JSON data is submitted to <http://requestb.in>. A "Thank you" message and the JSON data is displayed as well as a link to view the submitted data on requestb.in.
 
-The gulpfile for the project is pretty simple. The JavaScript and HTML files are only copied and not processed while the Sass file is processed (by `gulp-sass`). Everything is copied into a `build` directory. Additionally, the default task will watch for changes and re-process when necessary. It will also start a simple web server to serve the built files. An npm script may have been sufficient for the task but I included a gulpfile because it was in the requirements. 
+The gulpfile for the project is pretty simple. The JavaScript and HTML files are copied into the `build` directory. The Sass files are processed and then copied. Additionally, the default task will watch for changes and re-process when necessary. It will also start a simple web server. An npm script may have been sufficient for the task but I included a gulpfile because it was in the requirements. 
 
 The CSS for the project is written with Sass. [normalize.css](http://necolas.github.io/normalize.css/) is also included. For the design, I decided to roughly copy the style of the [Mubaloo contact form](http://mubaloo.com/contact/). 
 
@@ -43,7 +43,7 @@ The Cordova generated app seems to work perfectly on my Nexus 5.
 
 ## Time usage and plan
 
-I received the task Friday morning. I was busy Friday but in the evening I refreshed my memory on Angular forms and installed Cordova. I spent all of Sunday on the task. 
+I received the task Friday morning. I was busy Friday but in the evening I refreshed my memory on Angular forms and installed Cordova. I spent all of Saturday on the task. 
 
 Here is how I spent my time (numbers in brackets represent the number of Pomodoro sessions taken, one Pomodoro session is 25 minutes of focused work):
 
@@ -59,6 +59,6 @@ Here is how I spent my time (numbers in brackets represent the number of Pomodor
 - Bundle into Cordova Android app (2)
 - Write README.md (2)
 
-Total of 16 Pomodoros. I would say 12 Pomodoros is more realistic for a full work day for me. 
+Total of 16 Pomodoros. I would say 12 Pomodoros is more representative of a full day's work for me. 
 
 I'm very happy with the end result. The only thing I think it could still use would be a "back" button to access previous stages of the form. I also could have done a better job of the Cordova scripts with more time. 
