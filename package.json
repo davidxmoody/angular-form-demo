@@ -1,5 +1,5 @@
 {
-  "name": "mubaloo-dev-test",
+  "name": "angular-form-demo",
   "author": "David Moody <david@davidxmoody.com>",
   "version": "0.0.0",
   "license": "MIT",
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "gulp",
-    "cordova-setup": "cordova create cordova com.davidxmoody.mulaboo MulabooForm && cd cordova && cordova platform add android",
+    "cordova-setup": "cordova create cordova com.davidxmoody.angular-form-demo AngularFormDemo && cd cordova && cordova platform add android",
     "cordova-run-android": "gulp build && cp -r build/* cordova/www && cd cordova && cordova run android"
   }
 }
